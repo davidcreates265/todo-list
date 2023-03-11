@@ -6,14 +6,42 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <% if (whatDay === "Saturday" || whatDay === "Sunday") { %>
-            <h1 style = "color:blueviolet"><%= whatDay %> Todo List</h1>    
-       <% } else { %>
-            <h1 style = "color:blue"><%= whatDay %> Todo List</h1> 
-        <%}%>
+  
 
+        <div class="box" id=""heading">
+            <h1><%= whatDay %> Todo List</h1>  
+            
+        </div>    
+            
+           
+                
+                <!-- <li><%= newListItems %> </li> -->
+              <div class="box">
+                <% for(let i=0; i<newListItems.length; i++) { %>
+             
+
+               <div class="item">           
+                    <p><%= newListItems[i] %></p>
+                </div>    
+                <%}%>
+
+               </div>
+                </body>
+               </body>
+            </body>
+            <form action="/" method="post">
+                
+                
+                  <input type="text" name="newItem" required autofocus>
+                 
+            
+            
+               
+                <button type="submit">Add</button>
+                <p class="mt-5 mb-3 text-muted">&copy; davidcreates 2023</p>
+              </form>
     </body>
 </html>
