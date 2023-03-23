@@ -11,8 +11,8 @@
     <body>
   
 
-        <div class="box" id=""heading">
-            <h1><%= whatDay %> Todo List</h1>  
+        <div class="box" id="heading">
+            <h1><%= whatDay %></h1>  
             
         </div>    
             
@@ -23,25 +23,25 @@
                 <% for(let i=0; i<newListItems.length; i++) { %>
              
 
-               <div class="item">           
+               <div class="item">  
+                   <input type="checkbox">        
                     <p><%= newListItems[i] %></p>
                 </div>    
                 <%}%>
-
-               </div>
-                </body>
-               </body>
-            </body>
-            <form action="/" method="post">
+               
+                <form class="item" action="/" method="post">
                 
                 
-                  <input type="text" name="newItem" required autofocus>
+                  <input type="text" name="newItem" placeholder="New Item" autocomplete="off " required autofocus>
                  
             
             
                
-                <button type="submit">Add</button>
-                <p class="mt-5 mb-3 text-muted">&copy; davidcreates 2023</p>
+                <button type="submit" name="button">+</button>
+                
               </form>
-    </body>
+
+               </div>
+                </body>
+               
 </html>
